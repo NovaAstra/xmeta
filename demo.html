@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class A {
+        a = {};
+      }
+
+      function createReactiveObject(obj) {
+        return new Proxy(obj, {
+          get(target, key) {
+            console.log(`Getting property "${key}"`);
+            const value = target[key];
+            if (typeof value === 'object' && value !== null) {
+              return createReactiveObject(value); 
+            }
+            return value;
+          },
+          set(target, key, value) {
+            console.log(`Setting property "${key}" to ${value}`);
+            target[key] = value;
+            return true;
+          },
+        });
+      }
+
+      const demo = createReactiveObject(new A())
+
+      demo.a.b = 13123;
+
+      console.log(demo)
+    </script>
+  </body>
+</html>
