@@ -2,4 +2,3 @@ packages:
   - 'ui/*'
   - 'core/*'
   - 'apps/*'
-  - 'internal/*'
