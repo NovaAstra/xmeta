@@ -5,7 +5,8 @@
     "demo": "pnpm -r --filter=@x/workflow run dev"
   },
   "devDependencies": {
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
   },
   "packageManager": "pnpm@8.15.4",
   "engines": {
