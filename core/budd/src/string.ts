@@ -17,9 +17,14 @@ export class StringSchema extends Schema {
 
   public email() {}
 
-  public length() {}
+  public length(length:number) {}
 
   public min(min: number) {}
 
   public max(max: number) {}
+
+  public matches(regex:RegExp){}
 }
+
+
+export const string = StringSchema.create
