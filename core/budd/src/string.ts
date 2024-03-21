@@ -1,13 +1,7 @@
 import { Schema } from './schema';
 
-const a = {
-  type: 'string',
-  required: true,
-  pattern: /a/, // 可选
-};
-
 export class StringSchema extends Schema {
-  public static create() {
+  public static create(): StringSchema {
     return new StringSchema();
   }
 
@@ -17,14 +11,13 @@ export class StringSchema extends Schema {
 
   public email() {}
 
-  public length(length:number) {}
+  public length(length: number) {}
 
   public min(min: number) {}
 
   public max(max: number) {}
 
-  public matches(regex:RegExp){}
+  public matches(regex: RegExp) {}
 }
 
-
-export const string = StringSchema.create
+export const string = StringSchema.create;

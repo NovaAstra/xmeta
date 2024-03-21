@@ -1,4 +1,6 @@
 export class Schema {
+  public readonly type: string;
+
   public nullable() {}
 
   public nonNullable() {}
