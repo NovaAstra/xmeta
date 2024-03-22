@@ -8,16 +8,6 @@ export class StringSchema extends Schema {
   public constructor() {
     super();
   }
-
-  public email() {}
-
-  public length(length: number) {}
-
-  public min(min: number) {}
-
-  public max(max: number) {}
-
-  public matches(regex: RegExp) {}
 }
 
 export const string = StringSchema.create;

@@ -1,5 +1,4 @@
 export enum SchemaTypeKind {
-    String = 'string',
-    Object = 'object',
-  }
-  
+  String = 'string',
+  Object = 'object',
+}
