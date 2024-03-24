@@ -3,6 +3,6 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "esModuleInterop":true
+    "esModuleInterop":true,
   }
 }
