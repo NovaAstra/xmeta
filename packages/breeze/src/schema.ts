@@ -1,5 +1,15 @@
-export abstract class Schema {
-  public constructor() {
-    console.log(232);
-  }
+export enum SchemaTypeKind {
+  BreezeString = 'BreezeString',
+}
+
+export interface SchemaImple {}
+
+export interface SchemaOptions {}
+
+export abstract class Schema implements SchemaImple {
+  public constructor() {}
+
+  public validateSync() {}
+
+  protected _validate() {}
 }

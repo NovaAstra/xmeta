@@ -6,7 +6,7 @@
   "scripts": {
     "bootstrap": "pnpm install",
     "preinstall": "npx only-allow pnpm",
-    "dev": "pnpm --filter @xmeta/breeze dev"
+    "dev": "pnpm --filter @xmeta/docs dev"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
