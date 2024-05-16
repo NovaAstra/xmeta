@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "bootstrap": "pnpm install",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "dev": "pnpm --filter @xmeta/breeze dev"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
@@ -16,3 +17,4 @@
     "node": "22.1.0"
   }
 }
+
