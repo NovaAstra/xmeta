@@ -1,15 +1,17 @@
 export enum SchemaTypeKind {
-  BreezeString = 'BreezeString',
+  BreezeString = "BreezeString",
 }
 
-export interface SchemaImple {}
-
-export interface SchemaOptions {}
+export interface SchemaImple {
+  readonly $type: SchemaTypeKind;
+}
 
 export abstract class Schema implements SchemaImple {
-  public constructor() {}
+  public abstract $type: SchemaTypeKind;
 
-  public validateSync() {}
+  protected clone() {
+    const next = Object.create(Object.getPrototypeOf(this));
 
-  protected _validate() {}
+    return next as this;
+  }
 }
